@@ -15,21 +15,21 @@ var path = {
     html: "build/",
     js: "build/js/",
     css: "build/css/",
-    img: "build/images/"
+    img: "build/img/"
   },
   src: {
     html: "src/index.html",
     js: "src/js/*.js",
     style: "src/sass/main.scss",
     css: "src/css/",
-    img: "src/images/**/*.*"
+    img: "src/img/**/*.*"
   },
   watch: {
     html: "src/**/*.html",
     js: "src/js/**/*.js",
     style: "src/sass/**/*.scss",
     css: "src/css/**/*.css",
-    img: "src/images/*.*"
+    img: "src/img/*.*"
   }
 };
 
