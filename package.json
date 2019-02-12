@@ -1,12 +1,12 @@
 {
-  "name": "basic",
+  "name": "Natours",
   "version": "1.0.0",
   "description": "Basic settings for pojects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "RadiAnika",
+  "author": "Sasha",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.1.2",
