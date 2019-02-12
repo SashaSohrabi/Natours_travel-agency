@@ -1,5 +1,14 @@
-// === GOOGLE FONTS ===
+// GOOGLE FONTS
 @mixin google-font($font) {
   $font: unquote($font);
   @import url(https://fonts.googleapis.com/css?family=#{$font});
+}
+
+// CLEAR FIX
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
