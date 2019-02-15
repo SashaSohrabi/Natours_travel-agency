@@ -15,21 +15,24 @@ var path = {
     html: "build/",
     js: "build/js/",
     css: "build/css/",
-    img: "build/img/"
+    img: "build/img/",
+    fonts: "build/fonts"
   },
   src: {
     html: "src/index.html",
     js: "src/js/*.js",
     style: "src/sass/main.scss",
     css: "src/css/",
-    img: "src/img/**/*.*"
+    img: "src/img/**/*.*",
+    fonts: "src/fonts/*.*"
   },
   watch: {
     html: "src/**/*.html",
     js: "src/js/**/*.js",
     style: "src/sass/**/*.scss",
     css: "src/css/**/*.css",
-    img: "src/img/*.*"
+    img: "src/img/*.*",
+    fonts: "src/fonts/*.*"
   }
 };
 
@@ -74,6 +77,10 @@ gulp.task("images", function() {
   gulp.src(path.src.img).pipe(gulp.dest(path.build.img));
 });
 
+gulp.task("fonts", function() {
+  gulp.src(path.src.fonts).pipe(gulp.dest(path.build.fonts));
+});
+
 gulp.task("browser-sync", function() {
   browserSync({
     server: {
@@ -88,6 +95,7 @@ gulp.task("build", [
   "minify-html",
   "styles",
   "images",
+  "fonts",
   "concatCss",
   "browser-sync"
 ]);
@@ -97,6 +105,7 @@ gulp.task("watch", function() {
   gulp.watch(path.watch.css, ["concatCss"]);
   gulp.watch(path.watch.html, ["minify-html"]);
   gulp.watch(path.watch.img, ["images"]);
+  gulp.watch(path.watch.fonts, ["fonts"]);
   gulp.watch(path.watch.js, ["scripts"]);
   gulp.watch(path.watch.html, browserSync.reload);
   gulp.watch(path.watch.style, browserSync.reload);
