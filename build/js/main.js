@@ -2,7 +2,7 @@
 
 // Select all links with hashes
 $('a[href*="#"]') // Remove links that don't actually link to anything
-.not('[href="#"]').not('[href="#0"]').click(function (event) {
+.not('[href="#"]').not('[href="#popup"]').not('[href="#options"]').click(function (event) {
   // On-page links
   if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
     // Figure out element to scroll to
